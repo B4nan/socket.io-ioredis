@@ -40,15 +40,13 @@ function adapter(uri, opts){
   }
 
   // opts
-  var host = opts.host || '127.0.0.1';
-  var port = Number(opts.port || 6379);
   var pub = opts.pubClient;
   var sub = opts.subClient;
   var prefix = opts.key || 'socket.io';
 
   // init clients if needed
-  if (!pub) pub = new redis(port, host);
-  if (!sub) sub = new redis(port, host);
+  if (!pub) pub = new redis(opts);
+  if (!sub) sub = new redis(opts);
 
   // this server's key
   var uid = uid2(6);
