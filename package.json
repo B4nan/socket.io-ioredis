@@ -1,6 +1,6 @@
 {
   "name": "socket.io-ioredis",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "",
   "license": "MIT",
   "repository": {
@@ -14,7 +14,7 @@
     "debug": "2.2.0",
     "ioredis": "^3.2.2",
     "msgpack-js": "0.3.0",
-    "socket.io-adapter": "^1.1.1",
+    "socket.io-adapter": "^0.4.0",
     "uid2": "0.0.3"
   },
   "devDependencies": {
