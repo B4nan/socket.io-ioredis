@@ -46,7 +46,7 @@ function adapter(uri, opts){
 
   // init clients if needed
   if (!pub) pub = new redis(opts);
-  if (!sub) sub = new redis(opts);
+  if (!sub) sub = new redis(Object.assign({}, { return_buffers: true }, opts));
 
   // this server's key
   var uid = uid2(6);
